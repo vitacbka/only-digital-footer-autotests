@@ -2,6 +2,16 @@
 
 <p align="center"> <img src="https://img.shields.io/badge/Java-17+-blue?style=for-the-badge&logo=openjdk" alt="Java Badge"/> <img src="https://img.shields.io/badge/Selenide-v6+-33CC33?style=for-the-badge&logo=selenium" alt="Selenide Badge"/> <img src="https://img.shields.io/badge/JUnit%205-E35C5C?style=for-the-badge&logo=junit5" alt="JUnit 5 Badge"/> </p>
 
+⚙️ Stack
+
+    Язык программирования: Java 
+
+    Фреймворк: Selenide
+
+    Тестовый фреймворк: JUnit 5
+
+    Сборка: Maven
+
 ✨ О проекте
 
 Этот проект содержит UI-автотесты, написанные на Java с использованием фреймворка Selenide и тестового фреймворка JUnit 5.
@@ -22,22 +32,10 @@
 
 Проект организован по стандартной структуре для Selenide/JUnit проектов:
 
-src/test/java/
-├── helper/              # Вспомогательные классы (например, FooterChecker)
-├── pages/               # Page Objects (ContactFooterPage, CookieBannerPage, BasePage и т.д.)
-├── test/                # Тестовые классы
-│   ├── BaseTest.java    # Базовый класс для конфигурации Selenide (@BeforeAll)
-│   ├── CareerPageFooterTest.java
-│   ├── ContactPageFooterTest.java
-│   └── OnlyDigitalPagesFooterParametrizedTest.java # Параметризованный тест для группы страниц
-└── testdata/            # Тестовые данные (TestData.java)
 
-⚙️ Stack
-
-    Язык программирования: Java 
-
-    Фреймворк: Selenide
-
-    Тестовый фреймворк: JUnit 5
-
-    Сборка: Maven
+| Папка | Назначение | Файлы |
+|-------|------------|-------|
+| `helper/` | Вспомогательные классы | `FooterChecker.java` |
+| `pages/` | Page Objects | `BasePage.java`, `ContactFooterPage.java`, `CookieBannerPage.java` |
+| `test/` | Тестовые классы | `BaseTest.java`, `CareerPageFooterTest.java`, `ContactPageFooterTest.java`, `OnlyDigitalPagesFooterParametrizedTest.java` |
+| `testdata/` | Тестовые данные | `TestData.java` |

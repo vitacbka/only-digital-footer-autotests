@@ -29,39 +29,39 @@ public class CareerFooterPage {
     public void checkAllCareerFooterElements() {
         assertAll(
                 () -> beIcon.shouldBe(visible)
-                        .as("Иконка Behance должна быть видима на странице Карьера")
-                        .shouldHave(text("be"))
-                        .as("Иконка Behance должна содержать текст 'be' на странице Карьера"),
+                        .as("Иконка Behance в футере на странице 'Карьера' должна быть видимой")
+                        .shouldHave(text("be")
+                                .because("Текст иконки Behance в футере не соответствует описанию")),
 
                 () -> dpIcon.shouldBe(visible)
-                        .as("Иконка DProfile должна быть видима на странице Карьера")
-                        .shouldHave(text("dp"))
-                        .as("Иконка DProfile должна содержать текст 'dp' на странице Карьера"),
+                        .as("Иконка DProfile в футере на странице 'Карьера' должна быть видимой")
+                        .shouldHave(text("dp")
+                                .because("Текст иконки DProfile в футере не соответствует описанию")),
 
                 () -> tgIcon.shouldBe(visible)
-                        .as("Иконка Telegram должна быть видима на странице Карьера")
-                        .shouldHave(text("tg"))
-                        .as("Иконка Telegram должна содержать текст 'tg' на странице Карьера"),
+                        .as("Иконка Telegram в футере на странице 'Карьера' должна быть видимой")
+                        .shouldHave(text("tg")
+                                .because("Текст иконки Telegram в футере не соответствует описанию")),
 
                 () -> vkIcon.shouldBe(visible)
-                        .as("Иконка VK должна быть видима на странице Карьера")
-                        .shouldHave(text("vk"))
-                        .as("Иконка VK должна содержать текст 'vk' на странице Карьера"),
+                        .as("Иконка VK в футере на странице 'Карьера' должна быть видимой на странице 'Карьера' должна быть видимой")
+                        .shouldHave(text("vk")
+                                .because("Текст иконки VK в футере не соответствует описанию")),
 
                 () -> copyright.shouldBe(visible)
-                        .as("Копирайт должен быть видим на странице Карьера")
-                        .shouldHave(text(TestData.EXPECTED_FOOTER_COPYRIGHT))
-                        .as("Текст копирайта не соответствует ожидаемому на странице Карьера"),
+                        .as("Копирайт в футере на странице 'Карьера' должен быть видим")
+                        .shouldHave(text(TestData.EXPECTED_FOOTER_COPYRIGHT)
+                                .because("Текст копирайта в футере на странице 'Карьера' не соответствует ожидаемому")),
 
                 () -> creativeDigitalProductionFooterBanner.shouldBe(visible)
-                        .as("Баннер 'Creative Digital Production' должен быть видим на странице Карьера")
-                        .shouldHave(text(TestData.EXPECTED_CREATIVE_DIGITAL_PRODUCTION_FOOTER_BANNER))
-                        .as("Текст баннера 'Creative Digital Production' не соответствует ожидаемому на странице Карьера"),
+                        .as("Баннер 'Creative Digital Production' в футере на странице 'Карьера' должна быть видимой")
+                        .shouldHave(text(TestData.EXPECTED_CREATIVE_DIGITAL_PRODUCTION_FOOTER_BANNER)
+                                .because("Текст баннера 'Creative Digital Production' в футере не соответствует ожидаемому")),
 
                 () -> privacyPolicyLink.shouldBe(visible)
-                        .as("Ссылка 'Политика конфиденциальности' должна быть видима на странице Карьера")
-                        .shouldHave(text(TestData.EXPECTED_FOOTER_PRIVACY_LINK_TEXT))
-                        .as("Текст ссылки 'Политика конфиденциальности' не соответствует ожидаемому на странице Карьера")
+                        .as("Ссылка 'Политика конфиденциальности' в футере на странице 'Карьера' должна быть видима")
+                        .shouldHave(text(TestData.EXPECTED_FOOTER_PRIVACY_LINK_TEXT)
+                                .because("Текст ссылки 'Политика конфиденциальности' в футере на странице 'Карьера' не соответствует ожидаемому"))
         );
     }
 }

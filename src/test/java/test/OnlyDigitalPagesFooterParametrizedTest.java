@@ -48,6 +48,8 @@ public class OnlyDigitalPagesFooterParametrizedTest {
         BasePage.openPage(url);
         cookieBannerPage.acceptCookiesIfVisible();
 
+        footerChecker.setPageName(pageName);
+
         preparePageForFooterCheck(url);
 
         footerChecker.checkAllFooterElements();
@@ -64,7 +66,7 @@ public class OnlyDigitalPagesFooterParametrizedTest {
 
     private void handleBlogPage() {
         footerPage.scrollToFooter();
-        Selenide.sleep(2000);
+        Selenide.sleep(3000);
         footerPage.scrollToFooter();
         footerPage.footerLogo.shouldBe(visible);
     }
